@@ -1,0 +1,59 @@
+<Hospital>
+	<Staff>
+		<Doctors>
+			<Doctor Specialty="Oncology" id ="145">
+				<Name>Vytautas</Name>
+				<LastName>Vytautaitis</LastName>
+				<Address>Gelezinkelio 25</Address>
+				<PhoneNumber>+37062575869</PhoneNumber>
+				<BirthDate>1978-05-14</BirthDate>
+				<Height unit="centimeters">186</Height>
+			</Doctor>
+			<Doctor Specialty="Cardiology" id = "102">
+				<Name>Kestutis</Name>
+				<LastName>Kestutaitis</LastName>
+				<Address>Gelezinkelio 27</Address>
+				<PhoneNumber>+37062472698</PhoneNumber>
+				<BirthDate>1977-05-13</BirthDate>
+				<Height unit="centimeters">180</Height>
+			</Doctor>
+		</Doctors>
+		<Nurses>
+			<Nurse WorksIn="General_Care_Department">
+				<Name>Jolanta</Name>
+				<LastName>Jolantaite</LastName>
+				<Address>Gelezinkelio 28</Address>
+				<PhoneNumber>+37062472699</PhoneNumber>
+				<BirthDate>1977-04-13</BirthDate>
+				<Height unit="centimeters">178</Height>
+			</Nurse>
+			<Nurse WorksIn="Cardiology_Department">
+				<Name>Kristina</Name>
+				<LastName>Kristinaite</LastName>
+				<Address>Gelezinkelio 29</Address>
+				<PhoneNumber>+37062472678</PhoneNumber>
+				<BirthDate>1979-04-13</BirthDate>
+				<Height unit="centimeters">175</Height>
+			</Nurse>
+		</Nurses>
+	</Staff>
+	<Patients>
+		<Patient PatientID = "189">
+			<Name>Migle</Name>
+			<LastName>Miglaite</LastName>
+			<Weight unit = "kilograms">85.5</Weight>
+			<Address>Gelezinkelio 30</Address>
+			<PhoneNumber>+37062472688</PhoneNumber>
+			<BirthDate>1980-04-13</BirthDate>
+			<AttendedDoctor ref="102"/>
+		</Patient>
+	</Patients>
+</Hospital>
+
+
+
+
+
+
+
+

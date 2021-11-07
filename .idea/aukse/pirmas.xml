@@ -1,0 +1,43 @@
+<mokesciuMoketojai>
+    <imones>
+        <imone pavadinimas="Tesla">
+            <vadovas>Elon Musk</vadovas>
+            <centrinisStabas salis="JAV">
+                <adresas>
+                    <miestas>Niujorkas</miestas>
+                    <gatve>Sun</gatve>
+                    <namas>10</namas>
+                </adresas>
+            </centrinisStabas>
+            <darbuotojuSkaicius>70757</darbuotojuSkaicius>
+            <akcijosKaina valiuta="USD" salis="USA">740.84</akcijosKaina>
+            <susikurimoData>2003-07-01</susikurimoData>
+        </imone>
+        <imone pavadinimas="Starlink" >
+            <vadovas>Elon Musk</vadovas>
+            <centrinisStabas salis="JAV">
+                <adresas>
+                    <miestas>Niujorkas</miestas>
+                    <gatve>Liberty</gatve>
+                    <namas>12</namas>
+                </adresas>
+            </centrinisStabas>
+            <darbuotojuSkaicius>182268</darbuotojuSkaicius>
+            <akcijosKaina valiuta="USD" salis="CA">295.50</akcijosKaina>
+            <susikurimoData>1975-04-04</susikurimoData>
+        </imone>
+        <imone pavadinimas="Vinted">
+            <vadovas>Thomas Plantenga</vadovas>
+            <centrinisStabas salis="LT">
+                <adresas>
+                    <miestas>Vilnius</miestas>
+                    <gatve>Subaciaus</gatve>
+                    <namas>15</namas>
+                </adresas>
+            </centrinisStabas>
+            <darbuotojuSkaicius>773</darbuotojuSkaicius>
+            <akcijosKaina valiuta="LT">123.12</akcijosKaina>
+            <susikurimoData>2012-11-26</susikurimoData>
+        </imone>
+    </imones>
+</mokesciuMoketojai>

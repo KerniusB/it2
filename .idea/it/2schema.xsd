@@ -103,19 +103,10 @@
         </xs:simpleContent>
     </xs:complexType>
 
-    <!--    4-->
-    <!--NERA DAR -->
+    <!--    4.1-->
 
-    <!--    5-->
-    <xs:complexType name="organisationInfo">
-        <xs:sequence>
-            <xs:element type="xs:string" name="vadovas"/>
-            <xs:element type="xs:string" name="pavadinimas"/>
-        </xs:sequence>
-    </xs:complexType>
 
-    <!--  restrict sudetingas su sudetingu-->
-
+    <!--    4.2-->
     <xs:complexType name="fullInfo">
         <xs:complexContent>
             <xs:extension base="organisationInfo">
@@ -135,6 +126,22 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+
+    <!--    5-->
+    <!--ČIA TIESIOG RESTRICTION PAVAIZDUOT-->
+
+    <!--    6-->
+    <!--NĖRA DAR-->
+
+    <!--    7-->
+    <xs:complexType name="organisationInfo">
+        <xs:sequence>
+            <xs:element type="xs:string" name="vadovas"/>
+            <xs:element type="xs:string" name="pavadinimas"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--  restrict sudetingas su sudetingu-->
 
     <!--  <xs:key name="KnygosRaktas">-->
     <!--    <xs:selector xpath="./p:mokesciuMoketojai/p:imones/p:imone/p:vadovas"/>-->

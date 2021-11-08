@@ -9,7 +9,7 @@
                     <namas>10</namas>
                 </adresas>
             </centrinisStabas>
-            <darbuotojuSkaicius>70757</darbuotojuSkaicius>
+            <darbuotojuSkaicius dirbaIsNamu="true">70757</darbuotojuSkaicius>
             <akcijosKaina valiuta="USD" salis="USA">740.84</akcijosKaina>
             <susikurimoData>2003-07-01</susikurimoData>
         </imone>
@@ -22,7 +22,7 @@
                     <namas>12</namas>
                 </adresas>
             </centrinisStabas>
-            <darbuotojuSkaicius>182268</darbuotojuSkaicius>
+            <darbuotojuSkaicius dirbaIsNamu="true">182268</darbuotojuSkaicius>
             <akcijosKaina valiuta="USD" salis="CA">295.50</akcijosKaina>
             <susikurimoData>1975-04-04</susikurimoData>
         </imone>
@@ -35,7 +35,7 @@
                     <namas>15</namas>
                 </adresas>
             </centrinisStabas>
-            <darbuotojuSkaicius>773</darbuotojuSkaicius>
+            <darbuotojuSkaicius dirbaIsNamu="true">773</darbuotojuSkaicius>
             <akcijosKaina valiuta="LT">123.12</akcijosKaina>
             <susikurimoData>2012-11-26</susikurimoData>
         </imone>

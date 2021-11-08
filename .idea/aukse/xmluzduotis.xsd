@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="https://panevezioligonine.lt/"
+           targetNamespace="https://panevezioligonine.lt/"
+           elementFormDefault="qualified">
+
+    <xs:simpleType name="DateType">
+        <xs:restriction base="xs:date">
+            <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="phoneList">
+        <xs:list itemType="xs:integer"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="notNullSTring">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="WeightType">
+        <xs:simpleContent>
+            <xs:extension base="xs:float">
+                <xs:attribute type="xs:string" name="unit"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="AttendedDoctorRef">
+        <xs:simpleContent>
+            <xs:extension base="notNullSTring">
+                <xs:attribute type="xs:integer" name="ref"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="HeightType">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute type="xs:string" name="unit" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="apribotoIlgioTekstas">
+        <xs:simpleContent>
+            <xs:restriction base="HeightType">
+                <xs:minInclusive value="0"/>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="HospitalType">
+        <xs:sequence>
+            <xs:element name="Staff">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Doctors">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="Doctor" type="Doctor" maxOccurs="unbounded" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Nurses">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="unbounded" minOccurs="0">
+                                    <xs:element name="Nurse" type="Nurse"/>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="Patients">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Patient" type="fullPatientInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Doctor" mixed="true">
+        <xs:complexContent>
+            <xs:restriction base="xs:anyType">
+                <xs:sequence>
+                    <xs:element type="xs:string" name="Name"/>
+                    <xs:element type="xs:string" name="LastName"/>
+                    <xs:element type="xs:string" name="Address"/>
+                    <xs:element type="phoneList" name="PhoneNumber"/>
+                    <xs:element type="DateType" name="BirthDate"/>
+                    <xs:element type="apribotoIlgioTekstas" name="Height"/>
+                </xs:sequence>
+                <xs:attribute type="xs:string" name="Specialty" use="optional"/>
+                <xs:attribute type="xs:integer" name="id" use="optional"/>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="Nurse">
+
+        <xs:sequence>
+            <xs:element type="xs:string" name="Name"/>
+            <xs:element type="xs:string" name="LastName"/>
+            <xs:element type="xs:string" name="Address"/>
+            <xs:element type="phoneList" name="PhoneNumber"/>
+            <xs:element type="DateType" name="BirthDate"/>
+            <xs:element type="apribotoIlgioTekstas" name="Height"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="WorksIn" use="optional"/>
+
+
+    </xs:complexType>
+
+
+    <xs:complexType name="personinfo">
+        <xs:sequence>
+            <xs:element type="xs:string" name="Name"/>
+            <xs:element type="xs:string" name="LastName"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="fullPatientInfo">
+        <xs:complexContent>
+            <xs:extension base="personinfo">
+                <xs:sequence>
+                    <xs:element name="Weight" type="WeightType"/>
+                    <xs:element type="xs:string" name="Address"/>
+                    <xs:element type="phoneList" name="PhoneNumber"/>
+                    <xs:element type="DateType" name="BirthDate"/>
+                    <xs:element name="AttendedDoctor" type="AttendedDoctorRef"/>
+                </xs:sequence>
+                <xs:attribute type="xs:integer" name="PatientID"/>
+
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="Hospital" type="HospitalType">
+
+        <xs:key name="KnygosRaktas">
+            <xs:selector xpath="Staff/Doctors/Doctor"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+
+        <xs:keyref name="NuorodaĮKnygą" refer="KnygosRaktas">
+            <xs:selector xpath="Patients/Patient/AttendedDoctor"/>
+            <xs:field xpath="@ref"/>
+        </xs:keyref>
+
+    </xs:element>
+
+</xs:schema>

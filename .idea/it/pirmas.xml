@@ -35,7 +35,7 @@
                     <namas>15</namas>
                 </adresas>
             </centrinisStabas>
-            <darbuotojuSkaicius dirbaIsNamu="">773</darbuotojuSkaicius>
+            <darbuotojuSkaicius dirbaIsNamu="false">773</darbuotojuSkaicius>
             <akcijosKaina valiuta="LT">123.12</akcijosKaina>
             <susikurimoData>2012-11-26</susikurimoData>
         </imone>

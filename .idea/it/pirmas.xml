@@ -1,7 +1,7 @@
 <mokesciuMoketojai>
     <imones>
         <imone pavadinimas="Tesla">
-            <pavaduotojas>Elon Musk</pavaduotojas>
+            <vadovas>Elon Musk</vadovas>
             <centrinisStabas salis="JAV">
                 <adresas>
                     <miestas>Niujorkas</miestas>
@@ -44,9 +44,7 @@
         <nePelnoSiekianciosOrg>
             <vadovas>Boyan Slat</vadovas>
             <pavadinimas>The Ocean Cleanup</pavadinimas>
-            <centrinisStabas salis="FR">
-                Paris
-            </centrinisStabas>
+            <centrinisStabas salis="FR">Paris</centrinisStabas>
             <darbuotojuSkaicius>80</darbuotojuSkaicius>
             <susikurimoData>2013-11-20</susikurimoData>
         </nePelnoSiekianciosOrg>

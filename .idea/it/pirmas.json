@@ -1,0 +1,76 @@
+{
+  "mokesciuMoketojai": {
+    "imones": {
+      "imone": [
+        {
+          "-pavadinimas": "Tesla",
+          "vadovas": "Elon Musk",
+          "centrinisStabas": {
+            "-salis": "JAV",
+            "adresas": {
+              "miestas": "Niujorkas",
+              "gatve": "Su",
+              "namas": 10
+            }
+          },
+          "darbuotojuSkaicius": 70757,
+          "akcijosKaina": {
+            "-valiuta": "USD",
+            "-salis": "USA",
+            "#text": 740.84
+          },
+          "susikurimoData": "2012-10-01"
+        },
+        {
+          "-pavadinimas": "Starlink",
+          "vadovas": "Elon Musk",
+          "centrinisStabas": {
+            "-salis": "JAV",
+            "adresas": {
+              "miestas": "Niujorkas",
+              "gatve": "Liberty",
+              "namas": 12
+            }
+          },
+          "darbuotojuSkaicius": 182268,
+          "akcijosKaina": {
+            "-valiuta": "USD",
+            "-salis": "CA",
+            "#text": 295.50
+          },
+          "susikurimoData": "1975-04-04"
+        },
+        {
+          "-pavadinimas": "Vinted",
+          "vadovas": "Thomas Plantenga",
+          "centrinisStabas": {
+            "-salis": "LT",
+            "adresas": {
+              "miestas": "Vilnius",
+              "gatve": "Subaciaus",
+              "namas": 15
+            }
+          },
+          "darbuotojuSkaicius": 773,
+          "akcijosKaina": {
+            "-valiuta": "LT",
+            "#text": 123.12
+          },
+          "susikurimoData": "2012-11-26"
+        }
+      ]
+    },
+    "nePelnoSiekianciosOrgs": {
+      "nePelnoSiekianciosOrg": {
+        "vadovas": "Boyan Slat",
+        "pavadinimas": "The Ocean Cleanup",
+        "centrinisStabas": {
+          "-salis": "FR",
+          "#text": "Paris"
+        },
+        "darbuotojuSkaicius": 80,
+        "susikurimoData": "2013-11-20"
+      }
+    }
+  }
+}

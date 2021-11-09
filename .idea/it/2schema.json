@@ -5,6 +5,67 @@
     "mokesciuMoketojai": {
       "type": "object",
       "properties": {
+        "-xmlns": {
+          "type": "string"
+        },
+        "vadovai": {
+          "type": "object",
+          "properties": {
+            "vardas": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "-id": {
+                      "type": "integer"
+                    },
+                    "#text": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "-id",
+                    "#text"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "-id": {
+                      "type": "integer"
+                    },
+                    "#text": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "-id",
+                    "#text"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "-id": {
+                      "type": "integer"
+                    },
+                    "#text": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "-id",
+                    "#text"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "vardas"
+          ]
+        },
         "imones": {
           "type": "object",
           "properties": {
@@ -18,93 +79,19 @@
                       "type": "string"
                     },
                     "vadovas": {
-                      "type": "string", "pattern": "^[A-Z].*"
-                    },
-                    "centrinisStabas": {
                       "type": "object",
                       "properties": {
-                        "-salis": {
-                          "type": "string", "pattern": "^[A-Z]*$"
-                        },
-                        "adresas": {
-                          "type": "object",
-                          "properties": {
-                            "miestas": {
-                              "type": "string",
-                              "enum": ["Niujorkas", "amber", "green"]
-                            },
-                            "gatve": {
-                              "type": "string", "minLength": 2, "maxLength": 3
-                            },
-                            "namas": {
-
-                              "anyOf": [
-                                {
-                                  "type": "string",
-                                  "maxLength": 5
-                                },
-                                {
-                                  "type": "number",
-                                  "minimum": 0
-                                }
-                              ]
-                            }
-                          },
-                          "required": [
-                            "miestas",
-                            "gatve",
-                            "namas"
-                          ]
-                        }
-                      },
-                      "required": [
-                        "-salis",
-                        "adresas"
-                      ]
-                    },
-                    "darbuotojuSkaicius": {
-                      "type": "integer"
-                    },
-                    "akcijosKaina": {
-                      "type": "object",
-                      "properties": {
-                        "-valiuta": {
-                          "type": "string"
-                        },
-                        "-salis": {
-                          "type": "string"
+                        "-id": {
+                          "type": "integer"
                         },
                         "#text": {
-                          "type": "number"
+                          "type": "string"
                         }
                       },
                       "required": [
-                        "-valiuta",
-                        "-salis",
+                        "-id",
                         "#text"
                       ]
-                    },
-                    "susikurimoData": {
-                      "type": "string", "format": "date"
-                    }
-                  },
-                  "required": [
-                    "-pavadinimas",
-                    "vadovas",
-                    "centrinisStabas",
-                    "darbuotojuSkaicius",
-                    "akcijosKaina",
-                    "susikurimoData"
-                  ]
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "-pavadinimas": {
-                      "type": "string"
-                    },
-                    "vadovas": {
-                      "type": "string"
                     },
                     "centrinisStabas": {
                       "type": "object",
@@ -123,12 +110,16 @@
                             },
                             "namas": {
                               "type": "integer"
+                            },
+                            "pastoKodas": {
+                              "type": "string"
                             }
                           },
                           "required": [
                             "miestas",
                             "gatve",
-                            "namas"
+                            "namas",
+                            "pastoKodas"
                           ]
                         }
                       },
@@ -138,7 +129,19 @@
                       ]
                     },
                     "darbuotojuSkaicius": {
-                      "type": "integer"
+                      "type": "object",
+                      "properties": {
+                        "-dirbaIsNamu": {
+                          "type": "string"
+                        },
+                        "#text": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "-dirbaIsNamu",
+                        "#text"
+                      ]
                     },
                     "akcijosKaina": {
                       "type": "object",
@@ -179,7 +182,19 @@
                       "type": "string"
                     },
                     "vadovas": {
-                      "type": "string"
+                      "type": "object",
+                      "properties": {
+                        "-id": {
+                          "type": "integer"
+                        },
+                        "#text": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "-id",
+                        "#text"
+                      ]
                     },
                     "centrinisStabas": {
                       "type": "object",
@@ -198,12 +213,16 @@
                             },
                             "namas": {
                               "type": "integer"
+                            },
+                            "pastoKodas": {
+                              "type": "string"
                             }
                           },
                           "required": [
                             "miestas",
                             "gatve",
-                            "namas"
+                            "namas",
+                            "pastoKodas"
                           ]
                         }
                       },
@@ -213,12 +232,27 @@
                       ]
                     },
                     "darbuotojuSkaicius": {
-                      "type": "integer"
+                      "type": "object",
+                      "properties": {
+                        "-dirbaIsNamu": {
+                          "type": "string"
+                        },
+                        "#text": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "-dirbaIsNamu",
+                        "#text"
+                      ]
                     },
                     "akcijosKaina": {
                       "type": "object",
                       "properties": {
                         "-valiuta": {
+                          "type": "string"
+                        },
+                        "-salis": {
                           "type": "string"
                         },
                         "#text": {
@@ -227,6 +261,110 @@
                       },
                       "required": [
                         "-valiuta",
+                        "-salis",
+                        "#text"
+                      ]
+                    },
+                    "susikurimoData": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "-pavadinimas",
+                    "vadovas",
+                    "centrinisStabas",
+                    "darbuotojuSkaicius",
+                    "akcijosKaina",
+                    "susikurimoData"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "-pavadinimas": {
+                      "type": "string"
+                    },
+                    "vadovas": {
+                      "type": "object",
+                      "properties": {
+                        "-id": {
+                          "type": "integer"
+                        },
+                        "#text": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "-id",
+                        "#text"
+                      ]
+                    },
+                    "centrinisStabas": {
+                      "type": "object",
+                      "properties": {
+                        "-salis": {
+                          "type": "string"
+                        },
+                        "adresas": {
+                          "type": "object",
+                          "properties": {
+                            "miestas": {
+                              "type": "string"
+                            },
+                            "gatve": {
+                              "type": "string"
+                            },
+                            "namas": {
+                              "type": "integer"
+                            },
+                            "pastoKodas": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "miestas",
+                            "gatve",
+                            "namas",
+                            "pastoKodas"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "-salis",
+                        "adresas"
+                      ]
+                    },
+                    "darbuotojuSkaicius": {
+                      "type": "object",
+                      "properties": {
+                        "-dirbaIsNamu": {
+                          "type": "string"
+                        },
+                        "#text": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "-dirbaIsNamu",
+                        "#text"
+                      ]
+                    },
+                    "akcijosKaina": {
+                      "type": "object",
+                      "properties": {
+                        "-valiuta": {
+                          "type": "string"
+                        },
+                        "-salis": {
+                          "type": "string"
+                        },
+                        "#text": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "-valiuta",
+                        "-salis",
                         "#text"
                       ]
                     },
@@ -250,11 +388,69 @@
             "imone"
           ]
         },
-
-
-
+        "nePelnoSiekianciosOrgs": {
+          "type": "object",
+          "properties": {
+            "nePelnoSiekianciosOrg": {
+              "type": "object",
+              "properties": {
+                "vadovas": {
+                  "type": "object",
+                  "properties": {
+                    "-id": {
+                      "type": "integer"
+                    },
+                    "#text": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "-id",
+                    "#text"
+                  ]
+                },
+                "pavadinimas": {
+                  "type": "string"
+                },
+                "centrinisStabas": {
+                  "type": "object",
+                  "properties": {
+                    "-salis": {
+                      "type": "string"
+                    },
+                    "#text": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "-salis",
+                    "#text"
+                  ]
+                },
+                "darbuotojuSkaicius": {
+                  "type": "integer"
+                },
+                "susikurimoData": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "vadovas",
+                "pavadinimas",
+                "centrinisStabas",
+                "darbuotojuSkaicius",
+                "susikurimoData"
+              ]
+            }
+          },
+          "required": [
+            "nePelnoSiekianciosOrg"
+          ]
+        }
       },
       "required": [
+        "-xmlns",
+        "vadovai",
         "imones",
         "nePelnoSiekianciosOrgs"
       ]

@@ -1,12 +1,7 @@
-<mokesciuMoketojai xmlns="https://www.forbes.com">
-    <vadovai>
-        <vardas id="1">Elon Musk</vardas>
-        <vardas id="2">Thomas Plantenga</vardas>
-        <vardas id="3">Boyan Slat</vardas>
-    </vadovai>
+<mokesciuMoketojai>
     <imones>
         <imone pavadinimas="Tesla">
-            <vadovas id="1">Elon Musk</vadovas>
+            <vadovas>Elon Musk</vadovas>
             <centrinisStabas salis="JAV">
                 <adresas>
                     <miestas>Niujorkas</miestas>
@@ -20,7 +15,7 @@
             <susikurimoData>2003-07-01</susikurimoData>
         </imone>
         <imone pavadinimas="Starlink" >
-            <vadovas id="1">Elon Musk</vadovas>
+            <vadovas>Elon Musk</vadovas>
             <centrinisStabas salis="JAV">
                 <adresas>
                     <miestas>Niujorkas</miestas>
@@ -34,7 +29,7 @@
             <susikurimoData>1975-04-04</susikurimoData>
         </imone>
         <imone pavadinimas="Vinted">
-            <vadovas id="2">Thomas Plantenga</vadovas>
+            <vadovas>Thomas Plantenga</vadovas>
             <centrinisStabas salis="LT">
                 <adresas>
                     <miestas>Vilnius</miestas>
@@ -50,7 +45,7 @@
     </imones>
     <nePelnoSiekianciosOrgs>
         <nePelnoSiekianciosOrg>
-            <vadovas id="3">Boyan Slat</vadovas>
+            <vadovas>Boyan Slat</vadovas>
             <pavadinimas>The Ocean Cleanup</pavadinimas>
             <centrinisStabas salis="FR">Paris</centrinisStabas>
             <darbuotojuSkaicius>800</darbuotojuSkaicius>

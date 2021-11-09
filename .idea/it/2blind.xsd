@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="mokesciuMoketojai" type="mokesciuMoketojaiType"/>
+
+    <xs:complexType name="mokesciuMoketojaiType">
+        <xs:sequence>
+            <xs:element type="imonesType" name="imones"/>
+            <xs:element type="nePelnoSiekianciosOrgsType" name="nePelnoSiekianciosOrgs"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="imonesType">
+        <xs:sequence>
+            <xs:element type="imoneType" name="imone" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="imoneType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="vadovas"/>
+            <xs:element type="centrinisStabasType" name="centrinisStabas"/>
+            <xs:element type="darbuotojuSkaiciusType" name="darbuotojuSkaicius"/>
+            <xs:element type="akcijosKainaType" name="akcijosKaina"/>
+            <xs:element type="xs:date" name="susikurimoData"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="pavadinimas" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="centrinisStabasType" mixed="true">
+        <xs:sequence>
+            <xs:element type="adresasType" name="adresas" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="salis" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="darbuotojuSkaiciusType">
+        <xs:simpleContent>
+            <xs:extension base="xs:int">
+                <xs:attribute type="xs:string" name="dirbaIsNamu" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="akcijosKainaType">
+        <xs:simpleContent>
+            <xs:extension base="xs:float">
+                <xs:attribute type="xs:string" name="valiuta" use="optional"/>
+                <xs:attribute type="xs:string" name="salis" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="adresasType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="miestas"/>
+            <xs:element type="xs:string" name="gatve"/>
+            <xs:element type="xs:byte" name="namas"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+    <xs:complexType name="nePelnoSiekianciosOrgsType">
+        <xs:sequence>
+            <xs:element type="nePelnoSiekianciosOrgType" name="nePelnoSiekianciosOrg"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="nePelnoSiekianciosOrgType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="vadovas"/>
+            <xs:element type="xs:string" name="pavadinimas"/>
+            <xs:element type="centrinisStabasType" name="centrinisStabas"/>
+            <xs:element type="xs:byte" name="darbuotojuSkaicius"/>
+            <xs:element type="xs:date" name="susikurimoData"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

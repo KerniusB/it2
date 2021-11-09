@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="mokesciuMoketojai" type="mokesciuMoketojaiType"/>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="https://www.forbes.com" xmlns:a="https://www.forbes.com" targetNamespace="https://www.forbes.com">
+
+    <xs:element name="mokesciuMoketojai" type="mokesciuMoketojaiType">
+        <xs:key name="vadovasId">
+            <xs:selector xpath="a:vadovai/a:vardas"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+
+        <xs:keyref name="vadovasRef" refer="vadovasId">
+            <xs:selector xpath="imones/imone/vadovas|nePelnoSiekianciosOrgs/nePelnoSiekianciosOrg/vadovas"/>
+            <xs:field xpath="@id"/>
+        </xs:keyref>
+    </xs:element>
 
     <xs:complexType name="mokesciuMoketojaiType">
         <xs:sequence>
+            <xs:element type="vadovaiType" name="vadovai"/>
             <xs:element type="imonesType" name="imones"/>
             <xs:element type="nePelnoSiekianciosOrgsType" name="nePelnoSiekianciosOrgs"/>
         </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="vadovaiType">
+        <xs:sequence>
+            <xs:element type="vadovasType" name="vardas" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="vadovasType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:int" name="id"/>
+            </xs:extension>
+        </xs:simpleContent>
     </xs:complexType>
 
     <xs:complexType name="imonesType">
@@ -19,8 +45,8 @@
     <xs:complexType name="imoneType">
         <xs:sequence>
             <xs:choice>
-                <xs:element type="xs:string" name="vadovas"/>
-                <xs:element type="xs:string" name="ikurejas"/>
+                <xs:element type="vadovasType" name="vadovas"/>
+                <xs:element type="vadovasType" name="ikurejas"/>
             </xs:choice>
             <xs:element type="centrinisStabasType" name="centrinisStabas"/>
             <xs:element type="darbuotojuSkaiciusType" name="darbuotojuSkaicius"/>
@@ -32,7 +58,7 @@
 
     <xs:complexType name="centrinisStabasType" mixed="true">
         <xs:sequence>
-            <xs:element type="adresasType" name="adresas" minOccurs="0"/>
+            <xs:element type="pilnasAdresasType" name="adresas" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute type="xs:string" name="salis" use="optional"/>
     </xs:complexType>
@@ -64,13 +90,13 @@
 
     <xs:complexType name="nePelnoSiekianciosOrgsType">
         <xs:sequence>
-            <xs:element type="nePelnoSiekianciosOrgType" name="nePelnoSiekianciosOrg"/>
+            <xs:element type="nePelnoSiekianciosOrgTypeRestricted" name="nePelnoSiekianciosOrg"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="nePelnoSiekianciosOrgType">
         <xs:sequence>
-            <xs:element type="xs:string" name="vadovas"/>
+            <xs:element type="vadovasType" name="vadovas"/>
             <xs:element type="xs:string" name="pavadinimas"/>
             <xs:element type="centrinisStabasType" name="centrinisStabas"/>
             <xs:element type="dirbaIs" name="darbuotojuSkaicius"/>
@@ -108,8 +134,40 @@
         </xs:simpleContent>
     </xs:complexType>
 
+    <!--    4.1-->
+    <xs:complexType name="nePelnoSiekianciosOrgTypeRestricted">
+        <xs:complexContent>
+            <xs:restriction base="nePelnoSiekianciosOrgType">
+                <xs:sequence>
+                    <xs:element type="xs:string" name="vadovas"/>
+                    <xs:element type="xs:string" name="pavadinimas"/>
+                    <xs:element type="centrinisStabasType" name="centrinisStabas"/>
+                    <xs:element type="dirbaIs" name="darbuotojuSkaicius"/>
+                    <xs:element type="xs:date" name="susikurimoData" minOccurs="0"/>
+                </xs:sequence>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!--    4.2-->
+    <xs:complexType name="pilnasAdresasType">
+        <xs:complexContent>
+            <xs:extension base="adresasType">
+                <xs:sequence>
+                    <xs:element type="xs:string" name="pastoKodas"></xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!--    5-->
+
+    <!--    6-->
 
     <!--    7-->
     <!--    choice-->
+
+    <!--    8-->
+
 
 </xs:schema>

@@ -1,12 +1,18 @@
-<mokesciuMoketojai>
+<mokesciuMoketojai xmlns="https://www.forbes.com">
+    <vadovai>
+        <vardas id="1">Elon Musk</vardas>
+        <vardas id="2">Thomas Plantenga</vardas>
+        <vardas id="3">Boyan Slat</vardas>
+    </vadovai>
     <imones>
         <imone pavadinimas="Tesla">
-            <vadovas>Elon Musk</vadovas>
+            <vadovas id="1">Elon Musk</vadovas>
             <centrinisStabas salis="JAV">
                 <adresas>
                     <miestas>Niujorkas</miestas>
                     <gatve>Sun</gatve>
                     <namas>10</namas>
+                    <pastoKodas>123</pastoKodas>
                 </adresas>
             </centrinisStabas>
             <darbuotojuSkaicius dirbaIsNamu="true">70757</darbuotojuSkaicius>
@@ -14,12 +20,13 @@
             <susikurimoData>2003-07-01</susikurimoData>
         </imone>
         <imone pavadinimas="Starlink" >
-            <vadovas>Elon Musk</vadovas>
+            <vadovas id="1">Elon Musk</vadovas>
             <centrinisStabas salis="JAV">
                 <adresas>
                     <miestas>Niujorkas</miestas>
                     <gatve>Liberty</gatve>
                     <namas>12</namas>
+                    <pastoKodas>123</pastoKodas>
                 </adresas>
             </centrinisStabas>
             <darbuotojuSkaicius dirbaIsNamu="true">182268</darbuotojuSkaicius>
@@ -27,12 +34,13 @@
             <susikurimoData>1975-04-04</susikurimoData>
         </imone>
         <imone pavadinimas="Vinted">
-            <vadovas>Thomas Plantenga</vadovas>
+            <vadovas id="2">Thomas Plantenga</vadovas>
             <centrinisStabas salis="LT">
                 <adresas>
                     <miestas>Vilnius</miestas>
                     <gatve>Subaciaus</gatve>
                     <namas>15</namas>
+                    <pastoKodas>123</pastoKodas>
                 </adresas>
             </centrinisStabas>
             <darbuotojuSkaicius dirbaIsNamu="false">773</darbuotojuSkaicius>
@@ -42,7 +50,7 @@
     </imones>
     <nePelnoSiekianciosOrgs>
         <nePelnoSiekianciosOrg>
-            <vadovas>Boyan Slat</vadovas>
+            <vadovas id="3">Boyan Slat</vadovas>
             <pavadinimas>The Ocean Cleanup</pavadinimas>
             <centrinisStabas salis="FR">Paris</centrinisStabas>
             <darbuotojuSkaicius>800</darbuotojuSkaicius>

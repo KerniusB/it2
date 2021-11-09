@@ -36,7 +36,7 @@
                 </adresas>
             </centrinisStabas>
             <darbuotojuSkaicius dirbaIsNamu="false">773</darbuotojuSkaicius>
-            <akcijosKaina valiuta="LT">123.12</akcijosKaina>
+            <akcijosKaina valiuta="LT" salis="LT">123.12</akcijosKaina>
             <susikurimoData>2012-11-26</susikurimoData>
         </imone>
     </imones>
@@ -45,7 +45,7 @@
             <vadovas>Boyan Slat</vadovas>
             <pavadinimas>The Ocean Cleanup</pavadinimas>
             <centrinisStabas salis="FR">Paris</centrinisStabas>
-            <darbuotojuSkaicius>80</darbuotojuSkaicius>
+            <darbuotojuSkaicius>800</darbuotojuSkaicius>
             <susikurimoData>2013-11-20</susikurimoData>
         </nePelnoSiekianciosOrg>
     </nePelnoSiekianciosOrgs>

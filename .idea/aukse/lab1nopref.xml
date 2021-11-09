@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<musicstore xmlns="https://www.discogs.com">
+    <music>
+        <artists>
+            <artist aid="10">ABBA</artist>
+            <artist aid="11">The Cure</artist>
+            <artist aid="12">Kraftwerk</artist>
+        </artists>
+        <albums>
+            <album>
+                <title lang="en">Arrival</title>
+                <artist aid="10">ABBA</artist>
+                <label>Polar</label>
+                <country>Sweden</country>
+                <release_date>1976-10-11</release_date>
+                <genre>
+                    Pop
+                    <style>Disco</style>
+                </genre>
+                <rating source="RYM">3.54</rating>
+                <price currency="USD">55.00</price>
+                <quantity>2</quantity>
+                <format rpm="45">7"</format>
+            </album>
+            <album>
+                <title lang="en">Disintegration</title>
+                <artist aid="11">The Cure</artist>
+                <label>Fiction Records</label>
+                <country>United Kingdom</country>
+                <release_date>1989-05-02</release_date>
+                <genre>
+                    Electronic rock
+                    <style>New Wave</style>
+                </genre>
+                <rating source="RYM">4.18</rating>
+                <price currency="USD">250.00</price>
+                <quantity>1</quantity>
+                <format rpm="45">7"</format>
+            </album>
+            <cd>
+                <title lang="en">Minimum-Maximum</title>
+                <artist aid="12">Kraftwerk</artist>
+                <label>Astralwerks</label>
+                <country>United States</country>
+                <release_date>2005-06-07</release_date>
+                <genre>
+                    Electronic
+                    <style>Synth-pop</style>
+                </genre>
+                <rating source="RYM">3.98</rating>
+                <price currency="USD">55.00</price>
+                <quantity>1</quantity>
+            </cd>
+        </albums>
+    </music>
+</musicstore>

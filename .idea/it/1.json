@@ -1,69 +1,38 @@
 {
   "mokesciuMoketojai": {
-    "-xmlns": "https://www.forbes.com",
-    "vadovai": {
-      "vardas": [
-        {
-          "-id": 1,
-          "#text": "Elon Musk"
-        },
-        {
-          "-id": 2,
-          "#text": "Thomas Plantenga"
-        },
-        {
-          "-id": 3,
-          "#text": "Boyan Slat"
-        }
-      ]
-    },
     "imones": {
       "imone": [
         {
           "-pavadinimas": "Tesla",
-          "vadovas": {
-            "-id": 1,
-            "#text": "Elon Musk"
-          },
+          "vadovas": "Elon Musk",
           "centrinisStabas": {
             "-salis": "JAV",
             "adresas": {
               "miestas": "Niujorkas",
-              "gatve": "Sun",
-              "namas": 10,
-              "pastoKodas": "123"
+              "gatve": "Su",
+              "namas": 10
             }
           },
-          "darbuotojuSkaicius": {
-            "-dirbaIsNamu": "true",
-            "#text": 70757
-          },
+          "darbuotojuSkaicius": 70757,
           "akcijosKaina": {
             "-valiuta": "USD",
             "-salis": "USA",
             "#text": 740.84
           },
-          "susikurimoData": "2003-07-01"
+          "susikurimoData": "2012-10-01"
         },
         {
           "-pavadinimas": "Starlink",
-          "vadovas": {
-            "-id": 1,
-            "#text": "Elon Musk"
-          },
+          "vadovas": "Elon Musk",
           "centrinisStabas": {
             "-salis": "JAV",
             "adresas": {
               "miestas": "Niujorkas",
               "gatve": "Liberty",
-              "namas": 12,
-              "pastoKodas": "123"
+              "namas": 12
             }
           },
-          "darbuotojuSkaicius": {
-            "-dirbaIsNamu": "true",
-            "#text": 182268
-          },
+          "darbuotojuSkaicius": 182268,
           "akcijosKaina": {
             "-valiuta": "USD",
             "-salis": "CA",
@@ -73,26 +42,18 @@
         },
         {
           "-pavadinimas": "Vinted",
-          "vadovas": {
-            "-id": 2,
-            "#text": "Thomas Plantenga"
-          },
+          "vadovas": "Thomas Plantenga",
           "centrinisStabas": {
             "-salis": "LT",
             "adresas": {
               "miestas": "Vilnius",
               "gatve": "Subaciaus",
-              "namas": 15,
-              "pastoKodas": "123"
+              "namas": 15
             }
           },
-          "darbuotojuSkaicius": {
-            "-dirbaIsNamu": "false",
-            "#text": 773
-          },
+          "darbuotojuSkaicius": 773,
           "akcijosKaina": {
             "-valiuta": "LT",
-            "-salis": "LT",
             "#text": 123.12
           },
           "susikurimoData": "2012-11-26"
@@ -101,18 +62,15 @@
     },
     "nePelnoSiekianciosOrgs": {
       "nePelnoSiekianciosOrg": {
-        "vadovas": {
-          "-id": 3,
-          "#text": "Boyan Slat"
-        },
+        "vadovas": "Boyan Slat",
         "pavadinimas": "The Ocean Cleanup",
         "centrinisStabas": {
           "-salis": "FR",
           "#text": "Paris"
         },
-        "darbuotojuSkaicius": 800,
+        "darbuotojuSkaicius": 80,
         "susikurimoData": "2013-11-20"
       }
     }
-  },
+  }
 }

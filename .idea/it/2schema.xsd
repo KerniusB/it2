@@ -105,7 +105,6 @@
 
     <!--    4.1-->
 
-
     <!--    4.2-->
     <xs:complexType name="fullInfo">
         <xs:complexContent>
@@ -131,7 +130,6 @@
     <!--ČIA TIESIOG RESTRICTION PAVAIZDUOT-->
 
     <!--    6-->
-    <!--NĖRA DAR-->
 
     <!--    7-->
     <xs:complexType name="organisationInfo">
@@ -141,16 +139,8 @@
         </xs:sequence>
     </xs:complexType>
 
-    <!--  restrict sudetingas su sudetingu-->
+    <!--    8-->
 
-    <!--  <xs:key name="KnygosRaktas">-->
-    <!--    <xs:selector xpath="./p:mokesciuMoketojai/p:imones/p:imone/p:vadovas"/>-->
-    <!--    <xs:field xpath="Elon Musk"/>-->
-    <!--  </xs:key>-->
-
-    <!--  <xs:keyref name="NuorodaĮKnygą" refer="KnygosRaktas">-->
-    <!--    <xs:selector xpath="./p:Hospital/p:Patients/p:Patient"/>-->
-    <!--    <xs:field xpath="@ref"/>-->
-    <!--  </xs:keyref>-->
+    <!--    9-->
 
 </xs:schema>
